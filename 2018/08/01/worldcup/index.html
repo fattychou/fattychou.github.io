@@ -19,12 +19,12 @@
 <meta property="og:site_name" content="Fatty Chou">
 <meta property="og:description" content="事项：优酷成为“优爱腾”三巨头中唯一夺得2018世界杯直播权的平台，受全民观球热潮影响，优酷APP多项运营指标大幅提升。优酷高额购入赛事版权、免费播放的行为，在短期内可以吸引大量流量，从长期来看，一方面彰显了阿里布局体育内容生态的野心，另一方面，世界杯期间，集团以优酷为核心，整合线上电商、线下零售等多方阿里生态资源，“吃喝玩乐”全方位覆盖，以期探索“内容+电商”新模式。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2018/08/01/worldcup/image/worldcup.jpg">
-<meta property="og:updated_time" content="2018-08-04T14:25:37.544Z">
+<meta property="og:image" content="http://yoursite.com/image/worldcup.jpg">
+<meta property="og:updated_time" content="2018-08-08T15:20:32.761Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="免费播放世界杯，优酷到底图什么？">
 <meta name="twitter:description" content="事项：优酷成为“优爱腾”三巨头中唯一夺得2018世界杯直播权的平台，受全民观球热潮影响，优酷APP多项运营指标大幅提升。优酷高额购入赛事版权、免费播放的行为，在短期内可以吸引大量流量，从长期来看，一方面彰显了阿里布局体育内容生态的野心，另一方面，世界杯期间，集团以优酷为核心，整合线上电商、线下零售等多方阿里生态资源，“吃喝玩乐”全方位覆盖，以期探索“内容+电商”新模式。">
-<meta name="twitter:image" content="http://yoursite.com/2018/08/01/worldcup/image/worldcup.jpg">
+<meta name="twitter:image" content="http://yoursite.com/image/worldcup.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Fatty Chou" type="application/atom+xml">
   
@@ -61,10 +61,32 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src="">
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
+
+
 
 
 <header id="allheader" class="site-header" role="banner" 
-   >
+   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -289,6 +311,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
